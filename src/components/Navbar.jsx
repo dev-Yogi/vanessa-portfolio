@@ -4,28 +4,28 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 
-const navLinks =[
-    { label: 'About', href: '#about' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Contact', href: '#contact' },
+const navLinks = [
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
 ]
 
 export default function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-    return(
-        <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
-            <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+  return (
+    <header className="fixed top-0 w-full z-50 border-b border-white/10 bg-background/80 backdrop-blur-md">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
 
-                { /*Logo*/}
-                <Link href="/" className="text-lg font-bold tracking-tight" style={{ fontFamily: 'var(--font-syne)' }}>
+        { /*Logo*/}
+        <Link href="/" className="text-lg font-bold tracking-tight" style={{ fontFamily: 'var(--font-syne)' }}>
           <span className="text-primary">V</span>
           <span className="text-foreground">K</span>
           <span className="text-muted-foreground text-sm font-normal ml-2 font-mono">dev</span>
         </Link>
- {/* Desktop Nav */}
- <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -35,8 +35,14 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono">
-            Resume
+          <Button
+            asChild
+            size="sm"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 font-mono"
+          >
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
           </Button>
         </nav>
         {/* Mobile Menu Button */}
@@ -65,11 +71,17 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button size="sm" className="bg-primary text-primary-foreground w-fit font-mono">
-            Resume
+          <Button
+            asChild
+            size="sm"
+            className="bg-primary text-primary-foreground w-fit font-mono"
+          >
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
           </Button>
         </div>
       )}
     </header>
-    )
+  )
 }

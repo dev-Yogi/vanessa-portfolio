@@ -4,6 +4,7 @@ import ExperienceSection from '@/components/ExperienceSection'
 import ProjectSection from '@/components/ProjectSection'
 import SpeakingSection from '@/components/SpeakingSection'
 import PressSection from '@/components/PressSection'
+import ContactSection from '@/components/ContactSection'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProjectSection />
       <SpeakingSection />
       <PressSection />
+      <ContactSection />
     </main>
   )
 }

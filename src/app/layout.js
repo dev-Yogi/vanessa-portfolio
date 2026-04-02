@@ -2,6 +2,7 @@ import { Syne } from 'next/font/google'
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={`${syne.variable} ${dmSans.variable} bg-background text-foreground antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )
