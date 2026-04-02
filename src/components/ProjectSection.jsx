@@ -22,7 +22,7 @@ const projects = [
         description:
             'Led full site migration and redesign for a commercial gate manufacturer. Built a CAD drawing grid block, custom redirect mapping for 1,200+ URLs, location-based filtering, and an interactive product selector UI with progressive disclosure states.',
         tags: ['WordPress', 'PHP', 'MySQL', 'React', 'Cloudflare', 'SEO'],
-        live: 'standing-pepper.flywheelstaging.com',
+        live: 'http://standing-pepper.flywheelstaging.com/',
         featured: true,
     },
     {
