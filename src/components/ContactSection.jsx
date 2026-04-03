@@ -99,7 +99,7 @@ export default function ContactSection() {
                   rel="noopener noreferrer"
                   className="text-muted-foreground font-mono text-sm hover:text-primary transition-colors"
                 >
-                  linkedin.com/in/yourprofile
+                  https://www.linkedin.com/in/vanessa-k-15393a139/
                 </a>
               </div>
               <div>
