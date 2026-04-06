@@ -1,7 +1,18 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+}
+
+const stagger = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.15 } }
+}
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -9,7 +20,7 @@ export default function ContactSection() {
     email: '',
     message: '',
   })
-  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [status, setStatus] = useState('idle')
   const [errorMessage, setErrorMessage] = useState('')
 
   const handleChange = (e) => {
@@ -48,81 +59,89 @@ export default function ContactSection() {
     <section id="contact" className="py-32 border-t border-border">
       <div className="max-w-6xl mx-auto px-6">
 
-        {/* Section Label */}
-        <p className="text-primary font-mono text-sm tracking-[0.2em] uppercase mb-12">
+        <motion.p
+          className="text-primary font-mono text-sm tracking-[0.2em] uppercase mb-12"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+        >
           Contact
-        </p>
+        </motion.p>
 
         <div className="grid md:grid-cols-[1fr_1fr] gap-16 items-start">
 
-          {/* Left — Heading */}
-          <div>
-            <h2
+          {/* Left */}
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            <motion.h2
               className="text-4xl md:text-5xl font-bold leading-tight mb-6"
               style={{ fontFamily: 'var(--font-syne)' }}
+              variants={fadeUp}
             >
               Let's Work
               <br />
               <span className="text-primary">Together.</span>
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            </motion.h2>
+            <motion.p
+              className="text-muted-foreground leading-relaxed mb-8"
+              variants={fadeUp}
+            >
               I'm currently open to new opportunities — freelance projects,
               full-time roles, or just a good conversation about tech.
               Drop me a message and I'll get back to you promptly.
-            </p>
+            </motion.p>
 
-            {/* Contact Details */}
-            <div className="space-y-4">
-              <div>
-                <p className="text-primary font-mono text-xs tracking-widest uppercase mb-1">
-                  Email
-                </p>
-                <p className="text-muted-foreground font-mono text-sm">
-                  vkasun94@gmail.com
-                </p>
-              </div>
-              <div>
-                <p className="text-primary font-mono text-xs tracking-widest uppercase mb-1">
-                  Location
-                </p>
-                <p className="text-muted-foreground font-mono text-sm">
-                  Omaha, NE
-                </p>
-              </div>
-              <div>
-                <p className="text-primary font-mono text-xs tracking-widest uppercase mb-1">
-                  LinkedIn
-                </p>
-                <a
-                  href="https://www.linkedin.com/in/vanessa-k-15393a139/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground font-mono text-sm hover:text-primary transition-colors"
-                >
-                  https://www.linkedin.com/in/vanessa-k-15393a139/
-                </a>
-              </div>
-              <div>
-                <p className="text-primary font-mono text-xs tracking-widest uppercase mb-1">
-                  GitHub
-                </p>
-                <a
-                  href="https://github.com/dev-Yogi"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground font-mono text-sm hover:text-primary transition-colors"
-                >
-                  github.com/dev-Yogi
-                </a>
-              </div>
-            </div>
-          </div>
+            <motion.div className="space-y-4" variants={stagger}>
+              {[
+                { label: 'Email', value: 'vkasun94@gmail.com', href: null },
+                { label: 'Location', value: 'Omaha, NE', href: null },
+                { label: 'LinkedIn', value: 'linkedin.com/in/vanessa-k-15393a139/', href: 'https://www.linkedin.com/in/vanessa-k-15393a139/' },
+                { label: 'GitHub', value: 'github.com/dev-Yogi', href: 'https://github.com/dev-Yogi' },
+              ].map((item) => (
+                <motion.div key={item.label} variants={fadeUp}>
+                  <p className="text-primary font-mono text-xs tracking-widest uppercase mb-1">
+                    {item.label}
+                  </p>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground font-mono text-sm hover:text-primary transition-colors"
+                    >
+                      {item.value}
+                    </a>
+                  ) : (
+                    <p className="text-muted-foreground font-mono text-sm">{item.value}</p>
+                  )}
+                </motion.div>
+              ))}
+            </motion.div>
+          </motion.div>
 
           {/* Right — Form */}
-          <div className="bg-card border border-border rounded-lg p-8">
+          <motion.div
+            className="bg-card border border-border rounded-lg p-8"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
             {status === 'success' ? (
               <div className="flex flex-col items-center justify-center h-full py-16 text-center">
-                <div className="text-primary text-4xl mb-4">✓</div>
+                <motion.div
+                  className="text-primary text-4xl mb-4"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: 'spring', stiffness: 200 }}
+                >
+                  ✓
+                </motion.div>
                 <h3
                   className="text-xl font-bold text-foreground mb-2"
                   style={{ fontFamily: 'var(--font-syne)' }}
@@ -141,8 +160,6 @@ export default function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-
-                {/* Name */}
                 <div>
                   <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Name
@@ -157,8 +174,6 @@ export default function ContactSection() {
                     className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground/50 font-mono text-sm focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
-
-                {/* Email */}
                 <div>
                   <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Email
@@ -173,8 +188,6 @@ export default function ContactSection() {
                     className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground/50 font-mono text-sm focus:outline-none focus:border-primary transition-colors"
                   />
                 </div>
-
-                {/* Message */}
                 <div>
                   <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Message
@@ -189,15 +202,9 @@ export default function ContactSection() {
                     className="w-full bg-background border border-border rounded-md px-4 py-3 text-foreground placeholder:text-muted-foreground/50 font-mono text-sm focus:outline-none focus:border-primary transition-colors resize-none"
                   />
                 </div>
-
-                {/* Error */}
                 {status === 'error' && (
-                  <p className="text-destructive font-mono text-xs">
-                    {errorMessage}
-                  </p>
+                  <p className="text-destructive font-mono text-xs">{errorMessage}</p>
                 )}
-
-                {/* Submit */}
                 <Button
                   type="submit"
                   disabled={status === 'loading'}
@@ -205,10 +212,9 @@ export default function ContactSection() {
                 >
                   {status === 'loading' ? 'Sending...' : 'Send Message →'}
                 </Button>
-
               </form>
             )}
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

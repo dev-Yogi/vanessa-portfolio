@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -22,7 +25,7 @@ const projects = [
         description:
             'Led full site migration and redesign for a commercial gate manufacturer. Built a CAD drawing grid block, custom redirect mapping for 1,200+ URLs, location-based filtering, and an interactive product selector UI with progressive disclosure states.',
         tags: ['WordPress', 'PHP', 'MySQL', 'React', 'Cloudflare', 'SEO'],
-        live: 'https://standing-pepper.flywheelstaging.com/',
+        live: 'https://americasgatecompany.com/',
         featured: true,
     },
     {
@@ -66,105 +69,132 @@ const projects = [
         featured: false,
     },
 ]
+const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+}
+const stagger = {
+    hidden: {},
+    show: { transition: { staggerChildren: 0.12 } }
+}
 
 export default function ProjectsSection() {
     return (
-        <section id="projects" className="py-32 border-t border-border">
-            <div className="max-w-6xl mx-auto px-6">
-
-                {/* Section Label */}
-                <p className="text-primary font-mono text-sm tracking-[0.2em] uppercase mb-12">
-                    Projects
-                </p>
-
-                <div className="grid md:grid-cols-[1fr_2fr] gap-16 mb-16">
-                    <div>
-                        <h2
-                            className="text-4xl md:text-5xl font-bold leading-tight sticky top-24"
-                            style={{ fontFamily: 'var(--font-syne)' }}
-                        >
-                            Things I've
-                            <br />
-                            <span className="text-primary">Built.</span>
-                        </h2>
-                    </div>
-
-                    {/* Project Cards */}
-                    <div className="space-y-6">
-                        {projects.map((project) => (
-                            <Card
-                                key={project.number}
-                                className="bg-card border-border hover:border-primary/50 transition-all duration-300 group p-8"
-                            >
-                                {/* Project Screenshot */}
-                                {project.image ? (
-                                    <div className="relative w-full h-48 overflow-hidden">
-                                        <Image
-                                            src={project.image}
-                                            alt={project.title}
-                                            fill
-                                            className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/80" />
-                                    </div>
-                                ) : (
-                                    <div className="w-full h-48 bg-muted flex items-center justify-center border-b border-border">
-                                        <span className="text-muted-foreground font-mono text-xs tracking-widest uppercase">
-                                            You're looking at it
-                                        </span>
-                                    </div>
-                                )}
-                                {/* Card Content */}
-                                <div className="p-8">
-                                    <div className="flex items-start justify-between mb-4">
-                                        <span className="text-primary font-mono text-xs tracking-widest">
-                                            {project.number}
-                                        </span>
-                                        {project.featured && (
-                                            <span className="text-accent font-mono text-xs tracking-widest uppercase">
-                                                Featured
-                                            </span>
-                                        )}
-                                    </div>
-                                </div>
-                                <h3
-                                    className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300"
-                                    style={{ fontFamily: 'var(--font-syne)' }}
-                                >
-                                    {project.title}
-                                </h3>
-
-                                <p className="text-muted-foreground leading-relaxed mb-6">
-                                    {project.description}
-                                </p>
-
-                                <div className="flex flex-wrap gap-2 mb-6">
-                                    {project.tags.map((tag) => (
-                                        <Badge
-                                            key={tag}
-                                            variant="outline"
-                                            className="border-border text-muted-foreground font-mono text-xs"
-                                        >
-                                            {tag}
-                                        </Badge>
-                                    ))}
-                                </div>
-
-                                <Button
-                                    asChild
-                                    size="sm"
-                                    variant="outline"
-                                    className="border-border text-muted-foreground hover:border-primary hover:text-primary font-mono transition-colors"
-                                >
-                                    <Link href={project.live} target="_blank" rel="noopener noreferrer">
-                                        View Live →
-                                    </Link>
-                                </Button>
-                            </Card>
+      <section id="projects" className="py-32 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6">
+  
+          <motion.p
+            className="text-primary font-mono text-sm tracking-[0.2em] uppercase mb-12"
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+          >
+            Projects
+          </motion.p>
+  
+          <div className="grid md:grid-cols-[1fr_2fr] gap-16 mb-16">
+  
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              <h2
+                className="text-4xl md:text-5xl font-bold leading-tight sticky top-24"
+                style={{ fontFamily: 'var(--font-syne)' }}
+              >
+                Things I've
+                <br />
+                <span className="text-primary">Built.</span>
+              </h2>
+            </motion.div>
+  
+            {/* Project Cards */}
+            <motion.div
+              className="space-y-6"
+              variants={stagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              {projects.map((project) => (
+                <motion.div key={project.number} variants={fadeUp}>
+                  <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 group p-0 overflow-hidden">
+  
+                    {/* Project Screenshot */}
+                    {project.image ? (
+                      <div className="relative w-full h-48 overflow-hidden">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/80" />
+                      </div>
+                    ) : (
+                      <div className="w-full h-48 bg-muted flex items-center justify-center border-b border-border">
+                        <span className="text-muted-foreground font-mono text-xs tracking-widest uppercase">
+                          You're looking at it
+                        </span>
+                      </div>
+                    )}
+  
+                    {/* Card Content */}
+                    <div className="p-8">
+                      <div className="flex items-start justify-between mb-4">
+                        <span className="text-primary font-mono text-xs tracking-widest">
+                          {project.number}
+                        </span>
+                        {project.featured && (
+                          <span className="text-accent font-mono text-xs tracking-widest uppercase">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+  
+                      <h3
+                        className="text-2xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300"
+                        style={{ fontFamily: 'var(--font-syne)' }}
+                      >
+                        {project.title}
+                      </h3>
+  
+                      <p className="text-muted-foreground leading-relaxed mb-6">
+                        {project.description}
+                      </p>
+  
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {project.tags.map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="outline"
+                            className="border-border text-muted-foreground font-mono text-xs"
+                          >
+                            {tag}
+                          </Badge>
                         ))}
+                      </div>
+  
+                      <Button
+                        asChild
+                        size="sm"
+                        variant="outline"
+                        className="border-border text-muted-foreground hover:border-primary hover:text-primary font-mono transition-colors"
+                      >
+                        <Link href={project.live} target="_blank" rel="noopener noreferrer">
+                          View Live →
+                        </Link>
+                      </Button>
                     </div>
-                </div>
-            </div>
-        </section>
+                  </Card>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </div>
+      </section>
     )
-}
+  }
