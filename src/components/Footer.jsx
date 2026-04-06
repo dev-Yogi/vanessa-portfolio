@@ -11,7 +11,7 @@ const navLinks = [
 
 const socialLinks = [
   { label: 'GitHub', href: 'https://github.com/dev-Yogi' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/yourprofile' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vanessa-k-15393a139/' },
 ]
 
 export default function Footer() {
