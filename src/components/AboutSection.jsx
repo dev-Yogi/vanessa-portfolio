@@ -4,17 +4,18 @@ import { motion } from 'framer-motion'
 import { Separator } from '@/components/ui/separator'
 
 const stats = [
-  { value: '10+', label: 'Years of Experience' },
+  { value: '5+', label: 'Years of Experience' },
   { value: '4', label: 'Brands Managed' },
-  { value: '15+', label: 'WordPress Projects' },
+  { value: '10+', label: 'WordPress Projects' },
   { value: '∞', label: 'Coffees Consumed' },
 ]
 
 const tools = [
-  { category: 'Frontend', items: 'React, Next.js, Tailwind CSS, Gutenberg, SASS' },
-  { category: 'Backend', items: 'PHP, Node.js, MySQL, REST APIs' },
-  { category: 'WordPress', items: 'ACF Pro, WooCommerce, Custom Plugins & Themes' },
-  { category: 'DevOps', items: 'Cloudflare, Vercel, Flywheel, WP Engine, Git' },
+  { category: 'Frontend', items: 'HTML, CSS, XML, JavaScript, React, Next.js, Tailwind CSS, SASS, Bootstrap, jQuery' },
+  { category: 'Backend', items: 'PHP, Node.js, MySQL, REST APIs , MongoDB' },
+  { category: 'WordPress', items: 'ACF Pro, WooCommerce, Custom Plugins & Themes'  },
+  { category: 'DevOps', items: 'Cloudflare, Vercel, Flywheel, WP Engine, Git, GitHub, Vercel, Netlify, CloudFlare' },
+  { category: 'SEO', items: 'Google Analytics, Google Search Console, Yoast SEO, Microsoft Clarity' },
 ]
 
 const fadeUp = {

@@ -6,11 +6,11 @@ import { Badge } from '@/components/ui/badge'
 const experiences = [
   {
     title: 'Director of Web Development & Digital Strategy',
-    company: 'PalmSHIELD / AGC / Patriot Custom Metals / LaVigne Enterprises',
+    company: 'PalmSHIELD / America\'s Gate Company / Patriot Custom Metals / LaVigne Enterprises',
     period: '2019 — Present',
     description:
-      'Leading all web development and digital strategy across four sister brands under unified ownership. Building and maintaining custom WordPress themes, plugins, and Gutenberg blocks. Architecting WooCommerce solutions, managing Cloudflare infrastructure, and driving SEO strategy across multiple product lines.',
-    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Tailwind CSS', 'MySQL', 'React', 'WooCommerce', 'ACF Pro', 'Cloudflare', 'SEO'],
+      'Leading all web development and digital strategy across four sister brands under unified ownership. Building and maintaining custom WordPress themes, plugins, and Gutenberg blocks. Architecting WooCommerce solutions, managing Cloudflare infrastructure, DNS Managment, and driving SEO strategy across multiple product lines.\n\nLed development and modernization of company websites, including a full rebuild of PalmSHIELD and a full rebuild of America’s Gate Company. Unified SEO, Google Ads, social media, and content strategy around shared keyword targets to create a cohesive, performance-driven system.\n\nThis alignment drove measurable growth:\n- +316% increase in organic clicks (5,070 → 21,100+)\n- +336% increase in search impressions (374K → 1.63M+)\n- Improved average search ranking from 30.2 to 21.6\n\nStrengthened infrastructure and scalability through Cloudflare and Twilio SendGrid, while creating and implementing SOPs.',
+    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Tailwind CSS', 'MySQL', 'React', 'WooCommerce', 'ACF Pro', 'Cloudflare', 'SEO', 'DNS Managment', 'Google Analytics', 'Google Search Console'],
   },
   {
     title: 'Code School Instructor Manager',
@@ -107,7 +107,7 @@ export default function ExperienceSection() {
                   {exp.company}
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed mb-6 whitespace-pre-line">
                   {exp.description}
                 </p>
 

@@ -13,8 +13,8 @@ const projects = [
         title: 'PalmSHIELD Website',
         image: '/images/projects/palmshield.jpg',
         description:
-            'Full custom WordPress build for an architectural products manufacturer. Includes custom Gutenberg blocks, ACF-powered product catalog, WooCommerce integration, mega menu plugin, and a color customization tool with canvas-based image download.',
-        tags: ['WordPress', 'PHP', 'ACF Pro', 'WooCommerce', 'Gutenberg', 'JavaScript'],
+            'Full custom WordPress build for an architectural products manufacturer. Includes custom Gutenberg blocks, ACF-powered product catalog, WooCommerce integration, custon mega menu plugin, and a color customization tool with canvas-based image download.',
+        tags: ['WordPress', 'PHP', 'ACF Pro', 'WooCommerce', 'REST APIs', 'JavaScript', 'SEO', 'Bootstrap'],
         live: 'https://palmshieldlouvers.com/',
         featured: true,
     },
@@ -24,7 +24,7 @@ const projects = [
         image: '/images/projects/agc.jpg',
         description:
             'Led full site migration and redesign for a commercial gate manufacturer. Built a CAD drawing grid block, custom redirect mapping for 1,200+ URLs, location-based filtering, and an interactive product selector UI with progressive disclosure states.',
-        tags: ['WordPress', 'PHP', 'MySQL', 'React', 'Cloudflare', 'SEO'],
+        tags: ['WordPress', 'PHP', 'MySQL', 'React', 'JavaScript', 'Tailwind CSS', 'SEO'],
         live: 'https://americasgatecompany.com/',
         featured: true,
     },
@@ -64,7 +64,7 @@ const projects = [
         image: null,
         description:
             'This site! Built with Next.js App Router, React, Tailwind CSS, and shadcn/ui. Features a working contact form powered by a Node.js API route. Deployed on Vercel with automatic CI/CD from GitHub.',
-        tags: ['Next.js', 'React', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Vercel'],
+        tags: ['Next.js', 'React', 'Tailwind CSS', 'shadcn/ui', 'Node.js', 'Vercel', 'Resend'],
         live: 'https://vanessa-portfolio-seven.vercel.app',
         featured: false,
     },
