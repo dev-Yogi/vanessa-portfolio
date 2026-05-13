@@ -100,7 +100,7 @@ export default function ContactSection() {
               {[
                 { label: 'Email', value: 'vkasun94@gmail.com', href: null },
                 { label: 'Location', value: 'Omaha, NE', href: null },
-                { label: 'LinkedIn', value: 'linkedin.com/in/vanessa-k-15393a139/', href: 'https://www.linkedin.com/in/vanessa-k-15393a139/' },
+                { label: 'LinkedIn', value: 'linkedin.com/in/vanessak/', href: 'https://www.linkedin.com/in/vanessa-k-15393a139/' },
                 { label: 'GitHub', value: 'github.com/dev-Yogi', href: 'https://github.com/dev-Yogi' },
               ].map((item) => (
                 <motion.div key={item.label} variants={fadeUp}>
