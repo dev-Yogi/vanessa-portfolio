@@ -6,19 +6,35 @@ import { Badge } from '@/components/ui/badge'
 const experiences = [
   {
     title: 'Director of Web Development & Digital Strategy',
-    company: 'PalmSHIELD / America\'s Gate Company / Patriot Custom Metals / LaVigne Enterprises',
-    period: '2022 — Present',
+    company: 'PalmSHIELD / America\'s Gate Company / LaVigne Enterprises / Patriot Custom Metals',
+    period: 'March 2025 — Present',
     description:
-      'Leading all web development and digital strategy across four sister brands under unified ownership. Building and maintaining custom WordPress themes, plugins, and Gutenberg blocks. Architecting WooCommerce solutions, managing Cloudflare infrastructure, DNS Managment, and driving SEO strategy across multiple product lines.\n\nLed development and modernization of company websites, including a full rebuild of PalmSHIELD and a full rebuild of America’s Gate Company. Unified SEO, Google Ads, social media, and content strategy around shared keyword targets to create a cohesive, performance-driven system.\n\nThis alignment drove measurable growth:\n- +316% increase in organic clicks (5,070 → 21,100+)\n- +336% increase in search impressions (374K → 1.63M+)\n- Improved average search ranking from 30.2 to 21.6\n\nStrengthened infrastructure and scalability through Cloudflare and Twilio SendGrid, while creating and implementing SOPs.',
-    tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Tailwind CSS', 'MySQL', 'React', 'WooCommerce', 'ACF Pro', 'Cloudflare', 'SEO', 'DNS Managment', 'Google Analytics', 'Google Search Console'],
+      'Promoted to director-level role overseeing web development and digital marketing strategy across four sister companies under unified ownership. Lead the full lifecycle of technical development while driving digital strategy to achieve measurable business growth.\n\n• Architect and maintain custom WordPress solutions — themes, plugins, Gutenberg blocks, and ACF Pro — with React.js, PHP, JavaScript (ES6+), HTML5, CSS3/SASS, and MySQL\n• Build responsive front-end systems with React.js, Next.js, Tailwind CSS, and Bootstrap; implement build pipelines with npm and webpack\n• Drive company-wide digital strategy across SEO, PPC, content marketing, and email, turning performance metrics into actionable initiatives\n• Lead technical SEO audits, structured data, and performance optimization to improve organic visibility and site speed\n• Manage Google Analytics, SEMrush, and Google Ads; guide A/B testing and conversion rate optimization\n• Oversee Git workflows and deployments on Flywheel and WP Engine across multiple commercial brands',
+    tags: ['WordPress', 'React.js', 'Next.js', 'PHP', 'JavaScript', 'MySQL', 'Tailwind CSS', 'ACF Pro', 'SEO', 'Google Ads', 'SEMrush', 'Google Analytics', 'Git', 'Flywheel', 'WP Engine'],
   },
   {
-    title: 'Code School Instructor Manager',
-    company: 'AIM Institute',
-    period: '2020 — 2022',
+    title: 'Front End Web Developer',
+    company: 'PalmSHIELD / America\'s Gate Company / LaVigne Enterprises / Patriot Custom Metals',
+    period: 'August 2022 — March 2025',
     description:
-      'Managed a team of instructors delivering full-stack web development curriculum. Facilitated hands-on coding education for career-changers entering the tech industry. Oversaw curriculum development and student progress across multiple cohorts.',
-    tags: ['JavaScript', 'HTML/CSS', 'Java', 'Vue.js', 'Spring Boot', 'JPS/Servlets', 'Curriculum Development', 'Team Management'],
+      'Developed and maintained WordPress websites and applications for commercial brands specializing in fencing, architectural screening, and gate automation systems.\n\n• Built custom WordPress themes and plugins with PHP, JavaScript, React.js, HTML5, and CSS3/SASS for responsive, user-focused designs\n• Implemented WooCommerce solutions with custom product catalog integrations and variant gallery systems for industrial product lines\n• Developed custom Gutenberg blocks, mega menu systems, and advanced ACF Pro integrations\n• Optimized performance through SEO best practices, technical audits, and speed work that improved organic search rankings\n• Collaborated with marketing and design to keep UI/UX brand-consistent across multiple web properties\n• Maintained Git workflows and managed deployments to production hosting environments',
+    tags: ['WordPress', 'PHP', 'JavaScript', 'React.js', 'HTML5', 'CSS3/SASS', 'WooCommerce', 'Gutenberg', 'ACF Pro', 'SEO', 'Git'],
+  },
+  {
+    title: 'FreelanceWeb Developer',
+    company: 'Lemon Fresh Day',
+    period: 'October 2022 — January 2023',
+    description:
+      'Modernized an outdated WordPress website with security updates, theme enhancements, and e-commerce functionality to improve user experience and enable online transactions.',
+    tags: ['WordPress', 'E-commerce', 'Security', 'Theme Development'],
+  },
+  {
+    title: 'Code School Instructor Manager & Full-Stack Curriculum Developer',
+    company: 'AIM Institute',
+    period: 'January 2020 — July 2022',
+    description:
+      'Managed full-time, part-time, and contract instructors — including hiring, scheduling, performance tracking, and communication — while designing and delivering full-stack curricula for career-changers.\n\n• Built curricula for Front-End Foundations, JavaScript Full-Stack, and Java Full-Stack covering HTML5, CSS3, JavaScript, React.js, Node.js, Vue.js, MySQL, and RESTful APIs\n• Instructed students with no technical background through hands-on bootcamps, from fundamentals to deployment-ready apps\n• Presented a ReactJS workshop at Heartland Developer Conference 2020 on building and deploying a todo-list application',
+    tags: ['JavaScript', 'React.js', 'Node.js', 'Vue.js', 'HTML5', 'CSS3', 'MySQL', 'RESTful APIs', 'Curriculum Development', 'Team Management'],
   },
 ]
 
