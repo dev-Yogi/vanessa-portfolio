@@ -7,7 +7,7 @@ const experiences = [
   {
     title: 'Director of Web Development & Digital Strategy',
     company: 'PalmSHIELD / America\'s Gate Company / Patriot Custom Metals / LaVigne Enterprises',
-    period: '2019 — Present',
+    period: '2022 — Present',
     description:
       'Leading all web development and digital strategy across four sister brands under unified ownership. Building and maintaining custom WordPress themes, plugins, and Gutenberg blocks. Architecting WooCommerce solutions, managing Cloudflare infrastructure, DNS Managment, and driving SEO strategy across multiple product lines.\n\nLed development and modernization of company websites, including a full rebuild of PalmSHIELD and a full rebuild of America’s Gate Company. Unified SEO, Google Ads, social media, and content strategy around shared keyword targets to create a cohesive, performance-driven system.\n\nThis alignment drove measurable growth:\n- +316% increase in organic clicks (5,070 → 21,100+)\n- +336% increase in search impressions (374K → 1.63M+)\n- Improved average search ranking from 30.2 to 21.6\n\nStrengthened infrastructure and scalability through Cloudflare and Twilio SendGrid, while creating and implementing SOPs.',
     tags: ['WordPress', 'PHP', 'JavaScript', 'CSS', 'Tailwind CSS', 'MySQL', 'React', 'WooCommerce', 'ACF Pro', 'Cloudflare', 'SEO', 'DNS Managment', 'Google Analytics', 'Google Search Console'],
@@ -15,7 +15,7 @@ const experiences = [
   {
     title: 'Code School Instructor Manager',
     company: 'AIM Institute',
-    period: '2017 — 2019',
+    period: '2020 — 2022',
     description:
       'Managed a team of instructors delivering full-stack web development curriculum. Facilitated hands-on coding education for career-changers entering the tech industry. Oversaw curriculum development and student progress across multiple cohorts.',
     tags: ['JavaScript', 'HTML/CSS', 'Java', 'Vue.js', 'Spring Boot', 'JPS/Servlets', 'Curriculum Development', 'Team Management'],
