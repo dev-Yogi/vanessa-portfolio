@@ -130,6 +130,7 @@ export default function ProjectsSection() {
                           src={project.image}
                           alt={project.title}
                           fill
+                          sizes="(min-width: 1152px) 700px, (min-width: 768px) 60vw, 100vw"
                           className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-card/80" />

@@ -148,6 +148,7 @@ export default function HeroSection() {
                   src="/images/vanessa.jpeg"
                   alt="Vanessa Kasun"
                   fill
+                  sizes="(min-width: 1024px) 320px, 288px"
                   className="object-cover object-top"
                   priority
                 />

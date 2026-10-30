@@ -63,7 +63,7 @@ export default function AboutSection() {
             </motion.h2>
             <motion.div className="space-y-4 text-muted-foreground leading-relaxed" variants={stagger}>
               <motion.p variants={fadeUp}>
-                I'm a Full Stack Developer and Director of Web Development based in Omaha, NE —
+                I'm a Semior Web Developer and Director of Web Development based in Omaha, NE —
                 currently leading digital strategy across four sister brands including{' '}
                 <span className="text-foreground">PalmSHIELD</span>,{' '}
                 <span className="text-foreground">America's Gate Company</span>, and{' '}
