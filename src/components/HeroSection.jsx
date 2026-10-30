@@ -10,7 +10,7 @@ const skills = [
   'HTML', 'XML', 'CSS','Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Bootstrap', 'jQuery',
   'WordPress', 'PHP', 'WooCommerce', 'Node.js', 'npm',
   'ACF Pro', 'MySQL', 'MongoDB', 'Git', 'GitHub', 'Vercel', 'Netlify',
-  'CloudFlare', 'REST APIs', 'SEO', 'DNS Management', 'Google Analytics', 'Google Search Console', 'Yoast SEO', 'Microsoft Clarity'
+  'Cloudflare', 'REST APIs', 'SEO', 'DNS Management', 'Google Analytics', 'Google Search Console', 'Yoast SEO', 'Microsoft Clarity'
 ]
 
 const fadeUp = {

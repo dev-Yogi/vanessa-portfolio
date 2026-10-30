@@ -24,7 +24,7 @@ test.describe( 'Portfolio home page', () => {
         });
 
         await page.goto( '/');
-        await page.waitForLoadState('networkidle');
+        await page.waitForLoadState('load');
 
         expect(errors, errors.join('\n')).toEqual([]);
     });
@@ -71,15 +71,15 @@ test.describe('Contact form', () => {
     // await page.getByPlaceholder('jane@example.com').fill('test@example.com');
     // await page.getByPlaceholder('Tell me about your project').fill('Hello from Playwright!');
     // Retry until React has hydrated and the values stick
-    const nameInput = page.getByPlaceholder('Jane Smith');
-    const emailInput = page.getByPlaceholder('jane@example.com');
-    const messageInput = page.getByPlaceholder('Tell me about your project');
+    const nameInput = page.getByLabel('Name');
+    const emailInput = page.getByLabel('Email');
+    const messageInput = page.getByLabel('Message');
 
      //fix timing issue. Playwright filled the Name field the instant the page appeared, before React had finished
      //loading and attaching the form (this is call 'hydration'). When React took over, it reset Name back to its starting value of ''.
      //Email and message were filled a moment later, so they kept their text. Because Name is *required*, the browser
      //refused to submit the form, so the sucess message never appeared. Webkit tends to be slower here, which is why it failed only there.
-     
+
     await expect(async () => {
         await nameInput.fill('Test User');
         await emailInput.fill('test@example.com');

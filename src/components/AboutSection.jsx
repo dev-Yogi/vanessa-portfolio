@@ -14,7 +14,7 @@ const tools = [
   { category: 'Frontend', items: 'HTML, CSS, XML, JavaScript, React, Next.js, Tailwind CSS, SASS, Bootstrap, jQuery' },
   { category: 'Backend', items: 'PHP, Node.js, MySQL, REST APIs , MongoDB' },
   { category: 'WordPress', items: 'ACF Pro, WooCommerce, Custom Plugins & Themes'  },
-  { category: 'DevOps', items: 'Cloudflare, Vercel, Flywheel, WP Engine, Git, GitHub, Vercel, Netlify, CloudFlare' },
+  { category: 'DevOps', items: 'Cloudflare, Vercel, Flywheel, WP Engine, Git, GitHub, Netlify' },
   { category: 'SEO', items: 'Google Analytics, Google Search Console, Yoast SEO, Microsoft Clarity' },
 ]
 
