@@ -1,5 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// Have Playwright start the site itself, so tests run again the code I just changed instead of the live site.
+
+
+const BASE_URL = process.env.BASE_URL ?? 'http://localhost:3000';
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -27,7 +32,7 @@ export default defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
-    baseURL: 'https://vanessa-portfolio-seven.vercel.app/',
+    baseURL: BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -71,10 +76,18 @@ export default defineConfig({
     // },
   ],
 
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  // By default, Playwright build the site, starts it on port 3000, runs the tests and shuts it down.
+  // reuseExistingServer: !process.env.CI means that locally, if npm run dev is already running, it uses that instead of building again. In CI it always does a fresh build.
+  // timeout: 120_000 gives the build up to 2 minutes before Playwright gives up.
+  // Setting BASE_URL skips all of that and tests whatever URL you give it, such as production. 
+
+  /* Start the site before testing, unless BASE_URL points somewhere else */
+  webServer: process.env.BASE_URL
+  ? undefined
+  : {
+    command: 'npm run build && npm run start',
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120_000,
+  },
 });

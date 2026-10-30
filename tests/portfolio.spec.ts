@@ -12,14 +12,20 @@ test.describe( 'Portfolio home page', () => {
         await expect(page.locator('h1')).toBeVisible();
     });
 
-    test(' has no console errors', async ({ page }) => {
+    // Make the console-errors test work no matter which URL it's testing.
+    // Make console test follow baseURL
+
+    //{ page, baseURL }: Playwright gives the test the baseURL from your config as well as the page, so the filter now matches whatever site is being tested.
+    test('has no console errors', async ({ page, baseURL }) => {
         const errors: string[] = [];
         page.on('console', (msg) => {
-            const fromMySite = msg.location().url.startsWith(
-                'https://vanessa-portfolio-seven.vercel.app'
-            )
-            if (msg.type() === 'error' && fromMySite) {
-                errors.push(msg.text());
+            const url = msg.location().url;
+            // The ! in baseURL! tells TypeScript “this is definitely set.” It’s always set in your config.
+            //isVercelOnly skips the analytics script that only exists on Vercel.
+            const fromMySite = url.startsWith(baseURL!);
+            const isVercelOnly = url.includes('/vercel/');
+            if (msg.type() === 'error' && fromMySite && !isVercelOnly) {
+                errors.push(`${msg.text()} → ${url}`);
             }
         });
 
