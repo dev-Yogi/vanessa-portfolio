@@ -161,10 +161,13 @@ export default function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
+                  <label
+                  htmlFor="contact-name"
+                   className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Name
                   </label>
                   <input
+                    id="contact-name"
                     type="text"
                     name="name"
                     value={formData.name}
@@ -175,10 +178,13 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
+                  <label
+                  htmlFor="contact-email"
+                   className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Email
                   </label>
                   <input
+                    id="contact-email"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -189,10 +195,12 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
+                  <label htmlFor="contact-message" 
+                  className="block text-muted-foreground font-mono text-xs tracking-widest uppercase mb-2">
                     Message
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}

@@ -47,7 +47,7 @@ export default function HeroSection() {
               transition={{ duration: 0.5 }}
             >
               <p className="text-primary font-mono text-sm tracking-[0.2em] uppercase">
-                Full Stack Developer
+                Senior Web Developer
               </p>
               <span className="text-border font-mono">—</span>
               <p className="text-accent font-mono text-sm tracking-[0.2em] uppercase">
