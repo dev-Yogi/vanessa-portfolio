@@ -7,10 +7,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const skills = [
-  'HTML', 'XML', 'CSS','Next.js', 'React', 'JavaScript', 'CSS', 'Tailwind CSS', 'Bootstrap', 'jQuery',
+  'HTML', 'XML', 'CSS','Next.js', 'React', 'JavaScript', 'Tailwind CSS', 'Bootstrap', 'jQuery',
   'WordPress', 'PHP', 'WooCommerce', 'Node.js', 'npm',
-  'ACF Pro', 'Cloudflare', 'MySQL', 'MongoDB', 'Git', 'GitHub', 'Vercel', 'Netlify',
-  'CloudFlare', 'REST APIs', 'SEO', 'DNS Managment', 'Google Analytics', 'Google Search Console', 'Yoast SEO', 'Microsoft Clarity'
+  'ACF Pro', 'MySQL', 'MongoDB', 'Git', 'GitHub', 'Vercel', 'Netlify',
+  'CloudFlare', 'REST APIs', 'SEO', 'DNS Management', 'Google Analytics', 'Google Search Console', 'Yoast SEO', 'Microsoft Clarity'
 ]
 
 const fadeUp = {
