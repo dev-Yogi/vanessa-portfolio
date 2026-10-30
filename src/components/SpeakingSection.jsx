@@ -92,6 +92,7 @@ export default function SpeakingSection() {
                 title="Building a React Application from Scratch — Heartland Developers Conference"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
               />
             </motion.div>
 

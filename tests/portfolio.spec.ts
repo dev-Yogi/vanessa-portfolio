@@ -23,7 +23,7 @@ test.describe( 'Portfolio home page', () => {
             // The ! in baseURL! tells TypeScript “this is definitely set.” It’s always set in your config.
             //isVercelOnly skips the analytics script that only exists on Vercel.
             const fromMySite = url.startsWith(baseURL!);
-            const isVercelOnly = url.includes('/vercel/');
+            const isVercelOnly = url.includes('/_vercel/');
             if (msg.type() === 'error' && fromMySite && !isVercelOnly) {
                 errors.push(`${msg.text()} → ${url}`);
             }
